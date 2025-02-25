@@ -37,8 +37,8 @@ MAC_ADDR_CUT_LOWER=$(echo $MAC_ADDR_FIRST_TWO | tr '[:upper:]' '[:lower:]')
 if [ "$MAC_ADDR_CUT_LOWER" = "02:42" ]; then
     # We are not --network=host. Bail.
     echo "Error: This container must be run with --network=host."
-    # If I_PINKY_PROMISE_I_AM_NOT_USING_NETWORK_HOST is set, we can bypass the check.
-    if [ -z "${I_PINKY_PROMISE_I_AM_NOT_USING_NETWORK_HOST:-}" ]; then
+    # If I_PINKY_PROMISE_I_AM_USING_NETWORK_HOST is set, we can bypass the check.
+    if [ -z "${I_PINKY_PROMISE_I_AM_USING_NETWORK_HOST:-}" ]; then
         exit 1
     fi
 fi
