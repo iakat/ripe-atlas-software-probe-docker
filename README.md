@@ -16,3 +16,13 @@ docker run -d --restart=unless-stopped \
 	ghcr.io/iakat/ripe-atlas-software-probe-docker:latest
 
 ```
+
+&&
+
+```bash
+cat /etc/ripe-atlas/probe_key.pub
+```
+
+&&
+
+Login to https://atlas.ripe.net/ and [add the probe](https://atlas.ripe.net/apply/swprobe/) with the key above.
